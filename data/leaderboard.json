@@ -1,0 +1,468 @@
+{
+  "updated": "2026-08-02",
+  "source": "xRouteBench (LLMRouter paper, Tables 1 and 2)",
+  "tables": [
+    {
+      "id": "main",
+      "label": "Main track",
+      "note": "Performance-first setting (α, β) = (1.0, 0.0). Higher is better. Best per column in bold, runner-up underlined.",
+      "defaultSort": "avg",
+      "columns": [
+        {
+          "id": "general",
+          "label": "General NLP"
+        },
+        {
+          "id": "locomo",
+          "label": "LoCoMo",
+          "group": "Memory"
+        },
+        {
+          "id": "longmemeval",
+          "label": "LongMemEval",
+          "group": "Memory"
+        },
+        {
+          "id": "geometry3k",
+          "label": "Geometry3K",
+          "group": "Multimodal"
+        },
+        {
+          "id": "mathvista",
+          "label": "MathVista",
+          "group": "Multimodal"
+        },
+        {
+          "id": "video",
+          "label": "Video",
+          "group": "Multimodal"
+        },
+        {
+          "id": "timeseries",
+          "label": "TimeSeries"
+        },
+        {
+          "id": "avg",
+          "label": "Avg"
+        }
+      ],
+      "rows": [
+        {
+          "router": "Smallest-LLM",
+          "family": "Rule-based",
+          "scores": {
+            "general": 57.55,
+            "locomo": 25.44,
+            "longmemeval": 36.77,
+            "geometry3k": 27.87,
+            "mathvista": 35.0,
+            "video": 33.33,
+            "timeseries": 49.61,
+            "avg": 37.94
+          }
+        },
+        {
+          "router": "Largest-LLM",
+          "family": "Rule-based",
+          "scores": {
+            "general": 70.29,
+            "locomo": 26.59,
+            "longmemeval": 35.57,
+            "geometry3k": 37.7,
+            "mathvista": 33.0,
+            "video": 22.22,
+            "timeseries": 45.67,
+            "avg": 38.72
+          }
+        },
+        {
+          "router": "kNNRouter",
+          "family": "Single-turn",
+          "scores": {
+            "general": 71.37,
+            "locomo": 25.24,
+            "longmemeval": 38.74,
+            "geometry3k": 31.15,
+            "mathvista": 41.0,
+            "video": 29.63,
+            "timeseries": 51.97,
+            "avg": 41.3
+          }
+        },
+        {
+          "router": "SVMRouter",
+          "family": "Single-turn",
+          "scores": {
+            "general": 74.21,
+            "locomo": 27.64,
+            "longmemeval": 38.68,
+            "geometry3k": 42.62,
+            "mathvista": 47.0,
+            "video": 29.63,
+            "timeseries": 55.91,
+            "avg": 45.1
+          }
+        },
+        {
+          "router": "MLPRouter",
+          "family": "Single-turn",
+          "scores": {
+            "general": 68.12,
+            "locomo": 26.78,
+            "longmemeval": 32.27,
+            "geometry3k": 27.87,
+            "mathvista": 34.0,
+            "video": 29.63,
+            "timeseries": 56.69,
+            "avg": 39.34
+          }
+        },
+        {
+          "router": "MFRouter",
+          "family": "Single-turn",
+          "scores": {
+            "general": 67.23,
+            "locomo": 24.49,
+            "longmemeval": 34.91,
+            "geometry3k": 40.98,
+            "mathvista": 29.0,
+            "video": 22.22,
+            "timeseries": 51.97,
+            "avg": 38.69
+          }
+        },
+        {
+          "router": "EloRouter",
+          "family": "Single-turn",
+          "scores": {
+            "general": 64.15,
+            "locomo": 25.7,
+            "longmemeval": 37.27,
+            "geometry3k": 45.9,
+            "mathvista": 50.0,
+            "video": 25.93,
+            "timeseries": 63.78,
+            "avg": 44.68
+          }
+        },
+        {
+          "router": "Hybrid LLM",
+          "family": "Single-turn",
+          "scores": {
+            "general": 64.68,
+            "locomo": 25.89,
+            "longmemeval": 36.56,
+            "geometry3k": 32.79,
+            "mathvista": 37.0,
+            "video": 33.33,
+            "timeseries": 51.18,
+            "avg": 40.2
+          }
+        },
+        {
+          "router": "RouterDC",
+          "family": "Single-turn",
+          "scores": {
+            "general": 80.56,
+            "locomo": 24.93,
+            "longmemeval": 36.77,
+            "geometry3k": 16.39,
+            "mathvista": 24.0,
+            "video": 25.93,
+            "timeseries": 45.67,
+            "avg": 36.32
+          }
+        },
+        {
+          "router": "GraphRouter",
+          "family": "Single-turn",
+          "scores": {
+            "general": 80.54,
+            "locomo": 25.94,
+            "longmemeval": 33.93,
+            "geometry3k": 42.62,
+            "mathvista": 50.0,
+            "video": 22.22,
+            "timeseries": 62.99,
+            "avg": 45.46
+          }
+        },
+        {
+          "router": "CausalLM",
+          "family": "Single-turn",
+          "pending": true,
+          "scores": {}
+        },
+        {
+          "router": "Router-R1",
+          "family": "Multi-turn",
+          "scores": {
+            "general": 35.64,
+            "locomo": 24.6,
+            "longmemeval": 17.28,
+            "geometry3k": 14.75,
+            "mathvista": 18.0,
+            "video": 22.22,
+            "timeseries": 23.62,
+            "avg": 22.3
+          }
+        },
+        {
+          "router": "kNN-MultiRound",
+          "family": "Multi-turn",
+          "scores": {
+            "general": 13.99,
+            "locomo": 24.7,
+            "longmemeval": 18.32,
+            "geometry3k": 16.39,
+            "mathvista": 30.0,
+            "video": 25.93,
+            "timeseries": 33.07,
+            "avg": 23.2
+          }
+        },
+        {
+          "router": "LLM-MultiRound",
+          "family": "Multi-turn",
+          "scores": {
+            "general": 12.98,
+            "locomo": 24.6,
+            "longmemeval": 17.44,
+            "geometry3k": 14.29,
+            "mathvista": 31.03,
+            "video": 25.93,
+            "timeseries": 30.33,
+            "avg": 22.37
+          }
+        }
+      ],
+      "unit": "%"
+    },
+    {
+      "id": "personalized",
+      "label": "Personalized track",
+      "note": "Accuracy on the human-preference split. Higher is better.",
+      "defaultSort": "acc",
+      "columns": [
+        {
+          "id": "acc",
+          "label": "Accuracy"
+        }
+      ],
+      "rows": [
+        {
+          "router": "GMTRouter",
+          "family": "Personalized",
+          "scores": {
+            "acc": 68.78
+          }
+        },
+        {
+          "router": "EloRouter",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 66.4
+          }
+        },
+        {
+          "router": "GraphRouter",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 65.23
+          }
+        },
+        {
+          "router": "SVMRouter",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 65.08
+          }
+        },
+        {
+          "router": "Largest-LLM",
+          "family": "Rule-based",
+          "scores": {
+            "acc": 58.05
+          }
+        },
+        {
+          "router": "Hybrid LLM",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 57.91
+          }
+        },
+        {
+          "router": "PersonalizedRouter",
+          "family": "Personalized",
+          "scores": {
+            "acc": 57.86
+          }
+        },
+        {
+          "router": "RouterDC",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 56.44
+          }
+        },
+        {
+          "router": "MFRouter",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 54.39
+          }
+        },
+        {
+          "router": "MLPRouter",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 52.93
+          }
+        },
+        {
+          "router": "kNNRouter",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 51.76
+          }
+        },
+        {
+          "router": "CausalLM",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 46.78
+          }
+        },
+        {
+          "router": "Router-R1",
+          "family": "Multi-turn",
+          "scores": {
+            "acc": 45.46
+          }
+        },
+        {
+          "router": "Smallest-LLM",
+          "family": "Rule-based",
+          "scores": {
+            "acc": 42.53
+          }
+        }
+      ],
+      "unit": "%"
+    },
+    {
+      "id": "deployment",
+      "label": "Real users",
+      "note": "Held-out sessions from real users collected through the Slack deployment. Higher is better.",
+      "defaultSort": "acc",
+      "columns": [
+        {
+          "id": "acc",
+          "label": "Accuracy"
+        }
+      ],
+      "rows": [
+        {
+          "router": "PersonalizedRouter",
+          "family": "Personalized",
+          "scores": {
+            "acc": 83.05
+          }
+        },
+        {
+          "router": "EloRouter",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 82.2
+          }
+        },
+        {
+          "router": "MLPRouter",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 78.81
+          }
+        },
+        {
+          "router": "SVMRouter",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 77.12
+          }
+        },
+        {
+          "router": "Hybrid LLM",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 73.73
+          }
+        },
+        {
+          "router": "GMTRouter",
+          "family": "Personalized",
+          "scores": {
+            "acc": 70.7
+          }
+        },
+        {
+          "router": "GraphRouter",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 67.17
+          }
+        },
+        {
+          "router": "RouterDC",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 65.25
+          }
+        },
+        {
+          "router": "kNNRouter",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 60.17
+          }
+        },
+        {
+          "router": "kNN-MultiRound",
+          "family": "Multi-turn",
+          "scores": {
+            "acc": 60.17
+          }
+        },
+        {
+          "router": "Smallest-LLM",
+          "family": "Rule-based",
+          "scores": {
+            "acc": 55.08
+          }
+        },
+        {
+          "router": "MFRouter",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 51.69
+          }
+        },
+        {
+          "router": "Largest-LLM",
+          "family": "Rule-based",
+          "scores": {
+            "acc": 41.53
+          }
+        },
+        {
+          "router": "CausalLM",
+          "family": "Single-turn",
+          "scores": {
+            "acc": 27.97
+          }
+        }
+      ],
+      "unit": "%"
+    }
+  ]
+}

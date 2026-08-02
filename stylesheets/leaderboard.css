@@ -1,0 +1,281 @@
+/* xRouteBench leaderboard — dense table, no data colours.
+ *
+ * Everything is greyscale + the host theme's ink tokens. Emphasis is
+ * typographic (weight, underline), so the table reads the same in light mode,
+ * dark mode, greyscale print and forced-colors.
+ */
+
+#xrb-leaderboard {
+  --xrb-ink: var(--md-default-fg-color);
+  --xrb-ink-2: var(--md-default-fg-color--light);
+  --xrb-ink-3: var(--md-default-fg-color--lighter);
+  --xrb-line: var(--md-default-fg-color--lightest);
+  --xrb-band: rgba(127, 127, 127, 0.07);
+  --xrb-radius: 0.35rem;
+  margin: 1.2rem 0;
+  font-size: 0.75rem;
+}
+
+/* ---- intro note -------------------------------------------------------- */
+
+.xrb-intro {
+  background: var(--xrb-band);
+  border-radius: var(--xrb-radius);
+  padding: 0.7rem 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.xrb-intro p {
+  margin: 0.15rem 0;
+  font-size: 0.74rem;
+  color: var(--xrb-ink);
+}
+
+.xrb-intro code {
+  font-size: 0.72rem;
+}
+
+/* ---- control bars ------------------------------------------------------ */
+
+.xrb-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.5rem;
+}
+
+.xrb-search {
+  flex: 1 1 16rem;
+  min-width: 10rem;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.75rem;
+  color: var(--xrb-ink);
+  background: transparent;
+  border: 1px solid var(--xrb-line);
+  border-radius: var(--xrb-radius);
+}
+
+.xrb-search::placeholder {
+  color: var(--xrb-ink-3);
+}
+
+.xrb-search:focus,
+.xrb-select:focus-within,
+.xrb-sort:focus-visible {
+  outline: 2px solid var(--md-primary-fg-color);
+  outline-offset: 1px;
+}
+
+.xrb-ghost {
+  padding: 0.42rem 0.8rem;
+  font-size: 0.73rem;
+  color: var(--xrb-ink);
+  background: transparent;
+  border: 1px solid var(--xrb-line);
+  border-radius: var(--xrb-radius);
+  cursor: pointer;
+}
+
+.xrb-ghost:hover {
+  border-color: var(--xrb-ink-2);
+}
+
+/* Dropdown pill: a native <select> wearing the pill, so it keeps the
+   platform menu, keyboard support and screen-reader semantics. */
+.xrb-select {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.3rem 0.6rem;
+  background: var(--xrb-band);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.xrb-select-label {
+  font-size: 0.72rem;
+  color: var(--xrb-ink-2);
+}
+
+.xrb-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0 1.05rem 0 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: inherit;
+  color: var(--xrb-ink);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  /* chevron, drawn in currentColor so it follows the theme */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 4.5 6 8l3.5-3.5' fill='none' stroke='%23888' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0 center;
+  background-size: 0.7rem;
+}
+
+.xrb-count {
+  margin-left: auto;
+  font-size: 0.7rem;
+  color: var(--xrb-ink-2);
+}
+
+/* ---- table ------------------------------------------------------------- */
+
+.xrb-scroll {
+  overflow-x: auto;
+  border-top: 1px solid var(--xrb-line);
+}
+
+.xrb-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.74rem;
+  white-space: nowrap;
+}
+
+.xrb-band th {
+  padding: 0.4rem 0.55rem 0.2rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--xrb-ink-2);
+  background: var(--xrb-band);
+}
+
+.xrb-head th {
+  padding: 0.3rem 0.55rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: bottom;
+  color: var(--xrb-ink);
+  background: var(--xrb-band);
+  border-bottom: 1px solid var(--xrb-line);
+}
+
+.xrb-head th.xrb-rank,
+.xrb-head th.xrb-sticky,
+.xrb-head th:nth-child(3) {
+  text-align: left;
+}
+
+/* Vertical rule at each column-group boundary. */
+.xrb-div {
+  border-left: 1px solid var(--xrb-line);
+}
+
+.xrb-th-label {
+  display: block;
+}
+
+.xrb-th-unit {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 400;
+  color: var(--xrb-ink-3);
+}
+
+.xrb-sort {
+  cursor: pointer;
+  user-select: none;
+}
+
+.xrb-sort:hover .xrb-glyph {
+  color: var(--xrb-ink);
+}
+
+.xrb-glyph {
+  margin-left: 0.2em;
+  font-size: 0.7em;
+  color: var(--xrb-ink-3);
+}
+
+.xrb-active .xrb-glyph {
+  color: var(--xrb-ink);
+}
+
+.xrb-table td {
+  padding: 0.5rem 0.55rem;
+  border-bottom: 1px solid var(--xrb-line);
+}
+
+.xrb-table tbody tr:hover td {
+  background: var(--xrb-band);
+}
+
+.xrb-rank {
+  width: 2rem;
+  color: var(--xrb-ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.xrb-sticky {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--md-default-bg-color);
+}
+
+.xrb-table tbody tr:hover .xrb-sticky {
+  background: var(--md-default-bg-color);
+}
+
+.xrb-name {
+  font-weight: 600;
+  color: var(--xrb-ink);
+}
+
+.xrb-fam {
+  color: var(--xrb-ink-2);
+  font-size: 0.7rem;
+}
+
+.xrb-num {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  color: var(--xrb-ink);
+}
+
+/* Emphasis is typographic — never colour. */
+.xrb-best {
+  font-weight: 700;
+}
+
+.xrb-runner {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.xrb-pending {
+  color: var(--xrb-ink-3);
+}
+
+.xrb-tag {
+  font-size: 0.6rem;
+  font-weight: 400;
+  padding: 0.05rem 0.4rem;
+  border: 1px solid var(--xrb-line);
+  border-radius: 999px;
+  color: var(--xrb-ink-2);
+}
+
+.xrb-empty {
+  text-align: center;
+  padding: 1.4rem;
+  color: var(--xrb-ink-2);
+}
+
+.xrb-foot {
+  margin-top: 0.5rem;
+  font-size: 0.68rem;
+  color: var(--xrb-ink-2);
+}
+
+@media screen and (max-width: 44rem) {
+  .xrb-count {
+    margin-left: 0;
+  }
+}
