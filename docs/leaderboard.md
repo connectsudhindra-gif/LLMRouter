@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # xRouteBench Leaderboard
 
 xRouteBench evaluates routers on both response quality and inference cost under a single protocol, spanning general NLP, memory-augmented, vision, time-series, and personalized scenarios.

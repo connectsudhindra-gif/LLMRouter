@@ -1,0 +1,82 @@
+/* Shared LLMRouter visual system, informed by the restrained LiveBench UI. */
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #2f54eb;
+  --md-primary-fg-color--light: #7585ff;
+  --md-primary-fg-color--dark: #2942d6;
+  --md-accent-fg-color: #2f54eb;
+  --md-accent-fg-color--transparent: rgba(47, 84, 235, .11);
+  --md-default-bg-color: #ffffff;
+  --md-default-fg-color: #14213d;
+  --md-default-fg-color--light: #5a6b85;
+  --md-default-fg-color--lighter: #8a99b5;
+  --md-default-fg-color--lightest: #e4e9f2;
+  --md-code-bg-color: #f3f6ff;
+  --md-code-fg-color: #243451;
+  --llmr-ground: #f7f8fc;
+  --llmr-surface: #ffffff;
+  --llmr-border: #e4e9f2;
+  --llmr-border-strong: #d4dbea;
+  --llmr-hover: #f3f6ff;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #7585ff;
+  --md-primary-fg-color--light: #a8b2ff;
+  --md-primary-fg-color--dark: #5165f4;
+  --md-accent-fg-color: #8f9cff;
+  --md-accent-fg-color--transparent: rgba(143, 156, 255, .16);
+  --md-default-bg-color: #171b29;
+  --md-default-fg-color: #e8ecf6;
+  --md-default-fg-color--light: #b5bfd3;
+  --md-default-fg-color--lighter: #7f8ba3;
+  --md-default-fg-color--lightest: #2b3448;
+  --md-code-bg-color: #20283a;
+  --md-code-fg-color: #dce4f7;
+  --llmr-ground: #121725;
+  --llmr-surface: #171b29;
+  --llmr-border: #2b3448;
+  --llmr-border-strong: #39455e;
+  --llmr-hover: #20283a;
+}
+
+body { background: var(--llmr-ground); }
+.md-main { background: var(--llmr-ground); }
+.md-main__inner { margin-top: 1.2rem; }
+.md-content { background: var(--llmr-surface); border: 1px solid var(--llmr-border); border-radius: .625rem; box-shadow: 0 1px 3px rgba(20, 33, 61, .06); }
+.md-content__inner { margin: 0; padding: 1.75rem 1.9rem 2.1rem; }
+.md-header { color: var(--md-default-fg-color); background: var(--llmr-surface); border-bottom: 1px solid var(--llmr-border); box-shadow: none; }
+.md-tabs { color: var(--md-default-fg-color); background: var(--llmr-surface); border-bottom: 1px solid var(--llmr-border); }
+.md-tabs__link { opacity: .68; }.md-tabs__link--active, .md-tabs__link:hover { color: var(--md-primary-fg-color); opacity: 1; }
+.md-nav__link--active, .md-nav__link:focus, .md-nav__link:hover { color: var(--md-primary-fg-color); }
+.md-sidebar { margin-top: .4rem; }.md-sidebar__scrollwrap { border-radius: .5rem; }
+.md-typeset { font-size: .78rem; line-height: 1.62; }
+.md-typeset h1 { margin: 0 0 1.1rem; color: var(--md-default-fg-color); font-size: 2rem; font-weight: 700; letter-spacing: -.035em; }
+.md-typeset h2 { font-weight: 700; letter-spacing: -.02em; }.md-typeset h3 { font-weight: 650; }
+.md-typeset a { color: var(--md-primary-fg-color); }.md-typeset a:hover { color: var(--md-primary-fg-color--dark); }
+.md-typeset hr { background-color: var(--llmr-border); }
+.md-typeset code { border-radius: .28rem; }.md-typeset pre > code { border: 1px solid var(--llmr-border); }
+.md-typeset table:not([class]) { font-size: .74rem; border: 1px solid var(--llmr-border); border-radius: .5rem; }
+.md-typeset table:not([class]) th { color: var(--md-default-fg-color); background: var(--llmr-hover); font-size: .67rem; letter-spacing: .035em; text-transform: uppercase; }
+.md-typeset table:not([class]) td, .md-typeset table:not([class]) th { border-color: var(--llmr-border); }
+.md-typeset table:not([class]) tr:hover td { background: var(--llmr-hover); }
+.md-typeset .admonition, .md-typeset details { border-color: var(--llmr-border-strong); border-radius: .45rem; box-shadow: none; }
+.md-search__form { background: var(--llmr-hover); border: 1px solid var(--llmr-border); border-radius: .4rem; }
+.md-search__input + .md-search__icon { color: var(--md-default-fg-color--light); }
+
+/* Homepage brand block, following the centered Logo → title → action-links
+   rhythm used on llm-reasoners.net. */
+.home-brand { margin: 2.2rem auto .55rem; }
+.home-brand img { width: min(12.5rem, 48vw); height: auto; }
+.md-typeset .home-title { max-width: 25ch; margin: 0 auto 1rem; color: #14213d; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: clamp(1.65rem, 3.8vw, 2.5rem); font-weight: 700; letter-spacing: -.03em; line-height: 1.12; text-align: center; }
+.home-action-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; max-width: 52rem; margin: 0 auto 1.35rem; }
+.home-action-nav a { display: inline-flex; align-items: center; justify-content: center; min-height: 2.5rem; padding: .5rem 1rem; color: #14213d; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: .95rem; font-weight: 600; letter-spacing: .01em; text-decoration: none; background: #edf2f7; border-radius: .375rem; transition: background-color .2s ease, color .2s ease, transform .2s ease; }
+.home-action-nav a:hover { color: #14213d; background: #e2e8f0; transform: translateY(-1px); }
+.home-action-nav a:focus-visible { outline: 2px solid #c9a227; outline-offset: 2px; }
+body:has(.home-action-nav) .md-tabs { display: none; }
+[data-md-color-scheme="slate"] .md-typeset .home-title { color: var(--md-default-fg-color); }
+[data-md-color-scheme="slate"] .home-action-nav a { color: var(--md-default-fg-color); background: #2d3748; }
+[data-md-color-scheme="slate"] .home-action-nav a:hover { background: #39455e; }
+
+@media screen and (max-width: 76.2344em) { .md-content { border: 0; border-radius: 0; box-shadow: none; } .md-main__inner { margin-top: 0; } }
+@media screen and (max-width: 44.9844em) { .md-content__inner { padding: 1.25rem 1rem 1.7rem; }.md-typeset h1 { font-size: 1.65rem; } }

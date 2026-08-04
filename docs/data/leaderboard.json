@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-02",
-  "source": "xRouteBench (LLMRouter paper, Tables 1 and 2)",
+  "updated": "2026-08-04",
+  "source": "xRouteBench (LLMRouter paper, Tables 2–4)",
   "tables": [
     {
       "id": "main",
@@ -190,8 +190,16 @@
         {
           "router": "CausalLM",
           "family": "Single-turn",
-          "pending": true,
-          "scores": {}
+          "scores": {
+            "general": 66.9,
+            "locomo": 25.4,
+            "longmemeval": 37.6,
+            "geometry3k": 24.6,
+            "mathvista": 34.0,
+            "video": 33.33,
+            "timeseries": 45.7,
+            "avg": 38.22
+          }
         },
         {
           "router": "Router-R1",

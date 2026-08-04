@@ -40,12 +40,11 @@ function xrbRender(root, data) {
 
     // Best / runner-up per column, computed over the whole track so filtering
     // never moves the marks.
-    const top = {};
+    const columnTop = {};
     t.columns.forEach((c) => {
-      const uniq = [...new Set(t.rows.map((r) => r.scores?.[c.id]).filter((v) => v != null))].sort(
-        (a, b) => b - a
-      );
-      top[c.id] = { first: uniq[0], second: uniq[1] };
+      columnTop[c.id] = [...new Set(t.rows.map((r) => r.scores?.[c.id]).filter((v) => v != null))]
+        .sort((a, b) => b - a)
+        .slice(0, 3);
     });
 
     let shown = t.rows
@@ -75,30 +74,23 @@ function xrbRender(root, data) {
       if (v == null) return `<td class="xrb-num${bandStarts.has(c.id) ? " xrb-div" : ""}">--</td>`;
       let cls = "xrb-num";
       if (bandStarts.has(c.id)) cls += " xrb-div";
-      if (v === top[c.id].first) cls += " xrb-best";
-      else if (v === top[c.id].second) cls += " xrb-runner";
+      const rank = columnTop[c.id].indexOf(v);
+      if (rank !== -1) cls += ` xrb-top-${rank + 1}`;
       return `<td class="${cls}">${v.toFixed(2)}</td>`;
     };
 
     root.innerHTML = `
-      <div class="xrb-intro">
-        <p>${esc(t.note || "")}</p>
-        <p>Rendered from <code>docs/data/leaderboard.json</code> · updated ${esc(data.updated)}.</p>
-      </div>
-
-      <div class="xrb-bar">
-        <input class="xrb-search" type="search" placeholder="Filter, e.g. Graph, SVM"
-               value="${esc(query)}" aria-label="Filter routers by name">
-        <button class="xrb-ghost" data-control="reset" type="button">Reset filters</button>
-      </div>
-
-      <div class="xrb-bar xrb-bar-selects">
-        ${select(
-          "table",
-          "Track",
-          tableId,
-          data.tables.map((x) => ({ value: x.id, text: x.label }))
-        )}
+      <section class="xrb-section" aria-label="Leaderboard results">
+        <div class="xrb-sec-head"><span class="xrb-sec-no">01</span><h2>Leaderboard</h2></div>
+        <p class="xrb-sec-sub">${esc(t.note || "")}</p>
+        <p class="xrb-data-note">Rendered from <code>docs/data/leaderboard.json</code> · updated ${esc(data.updated)}.</p>
+        <div class="xrb-controls" aria-label="Leaderboard controls">
+        <div class="xrb-tabs" role="tablist" aria-label="Leaderboard track">
+          ${data.tables
+            .map((x) => `<button class="xrb-tab" data-control="table" data-value="${esc(x.id)}" role="tab" aria-selected="${x.id === tableId}" type="button">${esc(x.label)}</button>`)
+            .join("")}
+        </div>
+        <input class="xrb-search" type="search" placeholder="Search routers…" value="${esc(query)}" aria-label="Filter routers by name">
         ${select("family", "Family", family, [
           { value: "all", text: "All" },
           ...families.map((f) => ({ value: f, text: f }))
@@ -108,10 +100,12 @@ function xrbRender(root, data) {
           { value: "10", text: "Top 10" },
           { value: "5", text: "Top 5" }
         ])}
-        <span class="xrb-count">${shown.length} of ${t.rows.length} routers</span>
-      </div>
+        <button class="xrb-reset" data-control="reset" type="button">Reset</button>
+        </div>
 
-      <div class="xrb-scroll">
+        <div class="xrb-table-topline"><span>${esc(t.label)}</span><span class="xrb-count">${shown.length} / ${t.rows.length} routers · Updated ${esc(data.updated)}</span></div>
+      <div class="xrb-table-shell" aria-label="${esc(t.label)} results">
+        <div class="xrb-scroll">
         <table class="xrb-table">
           <thead>
             <tr class="xrb-band">
@@ -161,7 +155,9 @@ function xrbRender(root, data) {
             }
           </tbody>
         </table>
+        </div>
       </div>
+      </section>
 
       <p class="xrb-foot">${
         limit !== "all" && total > shown.length
@@ -183,13 +179,18 @@ function xrbRender(root, data) {
         };
         return;
       }
-      el.onchange = () => {
-        if (name === "table") {
-          tableId = el.value;
+      if (name === "table") {
+        el.onclick = () => {
+          tableId = el.dataset.value;
           sortCol = null;
           sortDesc = true;
           family = "all";
-        } else if (name === "family") family = el.value;
+          draw();
+        };
+        return;
+      }
+      el.onchange = () => {
+        if (name === "family") family = el.value;
         else if (name === "limit") limit = el.value;
         draw();
       };

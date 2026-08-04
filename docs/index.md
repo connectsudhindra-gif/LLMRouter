@@ -1,14 +1,25 @@
 ---
 title: LLMRouter
+hide:
+  - navigation
 ---
 
 
-<div align="center">
+<div class="home-brand" align="center">
   <img src="assets/logo.png" alt="LLMRouter Logo" width="200">
 </div>
 
 
-<h1 align="center">🚀 LLMRouter: An Open-Source Library for LLM Routing</h1>
+<h1 class="home-title" align="center">🚀 LLMRouter: An Open-Source Library for LLM Routing</h1>
+
+<nav class="home-action-nav" aria-label="Project links">
+  <a href="./">Home</a>
+  <a href="leaderboard/">Leaderboard</a>
+  <a href="getting-started/installation/">Getting started</a>
+  <a href="learn/">Learn LLMRouter</a>
+  <a href="tutorials/">Tutorials</a>
+  <a href="api/">API Reference</a>
+</nav>
 
 <p align="center">
   <a href="https://www.python.org/downloads/release/python-3109/">

@@ -73,15 +73,15 @@ theme:
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/toggle-switch-off
         name: Switch to system preference
@@ -222,7 +222,7 @@ extra_javascript:
     - "js/leaderboard.js"
 
 extra_css:
+  - stylesheets/theme.css
   - stylesheets/leaderboard.css
 # extra_css:
 #   - stylesheets/llm-search.css
-
