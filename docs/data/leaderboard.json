@@ -249,7 +249,7 @@
     {
       "id": "personalized",
       "label": "Personalized track",
-      "note": "Accuracy on the human-preference split. Higher is better.",
+      "note": "Accuracy from a persona-conditioned LLM judge. Higher is better.",
       "defaultSort": "acc",
       "columns": [
         {
@@ -304,7 +304,7 @@
           "router": "PersonalizedRouter",
           "family": "Personalized",
           "scores": {
-            "acc": 57.86
+            "acc": 67.86
           }
         },
         {

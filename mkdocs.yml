@@ -20,7 +20,7 @@
 
 # Project information
 site_name: LLMRouter
-site_url: https://ulab-uiuc.github.io/LLMRouter/
+site_url: https://yhd0225.github.io/LLMRouter-preview/
 site_author: LLMRouter contributors
 site_description: >-
   LLMRouter is an open-source library for LLM routing: train routers, run inference,
@@ -105,13 +105,6 @@ extra:
     deprecated: Deprecated
   analytics:
     provider: google
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/ulab-uiuc/LLMRouter
-    - icon: fontawesome/brands/python
-      link: https://pypi.org/project/llmrouter/
-    - icon: fontawesome/brands/slack
-      link: https://join.slack.com/t/llmrouteropen-ri04588/shared_invite/zt-3jz3cc6d1-ncwKEHvvWe0OczHx7K5c0g
   # llm_search:
   #   enabled: true
   #   api_endpoint: "http://localhost:8000"
@@ -161,65 +154,17 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Home: index.md
+  - Paper: https://yhd0225.github.io/LLMRouter-preview/#paper
+  - Code: https://github.com/ulab-uiuc/LLMRouter
+  - Hugging Face: https://huggingface.co/datasets/ulab-ai/xRouteBench
+  - Blog: blog/index.md
   - Leaderboard: leaderboard.md
-  - Getting started:
-      - Installation: getting-started/installation.md
-      - Quickstart: getting-started/quickstart.md
-      - Config basics: getting-started/config-basics.md
-      - Data formats: getting-started/data-formats.md
-  - Learn LLMRouter:
-      - Overview: learn/index.md
-      - Architecture: learn/architecture.md
-      - Router families: learn/router-families.md
-      - Data and metrics: learn/data-and-metrics.md
-      - Training and evaluation: learn/training-and-evaluation.md
-      - Plugin system: learn/plugin-system.md
-      - Deployment: learn/deployment.md
-  - Tutorials:
-      - Overview: tutorials/index.md
-      - Workflows:
-          - First routing run: tutorials/first-routing.md
-          - Batch inference: tutorials/batch-inference.md
-          - Chat demo: tutorials/chat-demo.md
-          - Evaluation workflow: tutorials/evaluation.md
-          - Custom router (plugin): tutorials/custom-router.md
-      - Notebooks:
-          - Data preparation: tutorials/notebooks/data-preparation.md
-          - Single-Round Routers:
-              - KNNRouter: tutorials/notebooks/knnrouter.md
-              - SVMRouter: tutorials/notebooks/svmrouter.md
-              - MLPRouter: tutorials/notebooks/mlprouter.md
-              - MFRouter: tutorials/notebooks/mfrouter.md
-              - EloRouter: tutorials/notebooks/elorouter.md
-              - DCRouter: tutorials/notebooks/dcrouter.md
-              - AutoMixRouter: tutorials/notebooks/automix-router.md
-              - HybridLLMRouter: tutorials/notebooks/hybrid-llm-router.md
-              - GraphRouter: tutorials/notebooks/graphrouter.md
-              - CausalLMRouter: tutorials/notebooks/causallm-router.md
-              - SmallestLLM: tutorials/notebooks/smallest-llm.md
-              - LargestLLM: tutorials/notebooks/largest-llm.md
-          - Multi-Round Routers:
-              - RouterR1: tutorials/notebooks/router-r1.md
-          - Personalized Routers:
-              - GMTRouter: tutorials/notebooks/gmtrouter.md
-          - Agentic Routers:
-              - KNNMultiRoundRouter: tutorials/notebooks/knnmultiroundrouter.md
-              - LLMMultiRoundRouter: tutorials/notebooks/llmmultiroundrouter.md
-          - Custom routers: tutorials/notebooks/custom-router.md
-  - API Reference:
-      - Overview: api/index.md
-      - CLI: api/cli.md
-      - Core classes: api/core.md
-      - Routers: api/routers.md
-      - Config reference: api/config.md
-      - Plugin system: api/plugins.md
-      - Data utilities: api/data.md
-      - Utils: api/utils.md
+  - Tutorials: tutorials/index.md
 
 extra_javascript:
     - "js/runllm-widget.js"
     - "js/leaderboard.js"
+    - "js/navigation-visibility.js"
 
 extra_css:
   - stylesheets/theme.css
