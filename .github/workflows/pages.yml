@@ -1,8 +1,8 @@
-name: Deploy preview site
+name: Deploy website
 
 on:
   push:
-    branches: [main]
+    branches: [website]
   workflow_dispatch:
 
 permissions:
