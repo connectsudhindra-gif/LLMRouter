@@ -127,7 +127,9 @@ body:has(.tsr-home) .md-grid { max-width: none; }
 .md-typeset .tsr-hero h1 { color: var(--tsr-accent); font-size: var(--tsr-font-display); font-weight: 800; letter-spacing: 0; line-height: var(--tsr-line-heading); }
 .tsr-hero__title { max-width: 45rem; margin: .58rem auto 1.2rem; color: var(--tsr-ink); font-size: var(--tsr-font-subtitle); font-weight: 400; letter-spacing: 0; line-height: var(--tsr-line-body); }
 .tsr-authors { max-width: 65rem; margin: .25rem auto; color: #2f3640; font-size: var(--tsr-font-meta); line-height: var(--tsr-line-small); }
-.tsr-affiliations { margin-top: .42rem; color: #69707c; font-size: var(--tsr-font-small); line-height: var(--tsr-line-small); }
+.tsr-authors sup, .tsr-affiliations sup, .tsr-equal-contribution sup { font-size: .7em; line-height: 0; }
+.tsr-equal-contribution { margin: .2rem auto 0; color: #69707c; font-size: var(--tsr-font-small); line-height: var(--tsr-line-small); }
+.tsr-affiliations { display: flex; flex-wrap: wrap; justify-content: center; gap: .12rem .85rem; margin-top: .35rem; color: #69707c; font-size: var(--tsr-font-small); line-height: var(--tsr-line-small); }
 .tsr-links { gap: .5rem; margin-top: 1.6rem; }
 .tsr-links a { min-height: 2.5rem; padding: .42rem 1rem; font-size: var(--tsr-font-meta); font-weight: 650; background: #4a4a4a; border: 1px solid #4a4a4a; border-radius: .3rem; }
 .tsr-links a:hover { background: #303030; border-color: #303030; transform: none; }

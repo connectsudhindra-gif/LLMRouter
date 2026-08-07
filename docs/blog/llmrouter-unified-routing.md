@@ -3,6 +3,17 @@ title: LLMRouter — A Unified Library, Evaluation, and Analysis for LLM Routing
 description: A unified way to build, evaluate, and deploy LLM routers across quality, cost, multi-turn interaction, and personalization.
 authors:
   - Tao Feng
+  - Fangxu Yu
+  - Haozhen Zhang
+  - Zhongjie Dai
+  - Liangqi Yuan
+  - Zijie Lei
+  - Weizhi Zhang
+  - Kunlun Zhu
+  - Haodong Yue
+  - Keyang Xuan
+  - Ge Liu
+  - Jiaxuan You
 date: 2026-08-04
 tags:
   - LLM Routing
@@ -251,7 +262,7 @@ If you use LLMRouter, please cite:
 ```bibtex
 @misc{feng2026llmrouter,
   title  = {LLMRouter: A Unified Library, Evaluation, and Analysis for LLM Routing},
-  author = {Tao Feng},
+  author = {Tao Feng and Fangxu Yu and Haozhen Zhang and Zhongjie Dai and Liangqi Yuan and Zijie Lei and Weizhi Zhang and Kunlun Zhu and Haodong Yue and Keyang Xuan and Ge Liu and Jiaxuan You},
   year   = {2026}
 }
 ```

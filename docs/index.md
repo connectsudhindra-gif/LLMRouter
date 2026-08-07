@@ -12,8 +12,15 @@ hide:
         <h1><span class="tsr-wordmark">LLMRouter</span></h1>
       </div>
       <p class="tsr-hero__title">A Unified Library, Evaluation, and Analysis for LLM Routing</p>
-      <p class="tsr-authors">Tao Feng &nbsp;&nbsp; Haozhen Zhang &nbsp;&nbsp; Zijie Lei &nbsp;&nbsp; Haodong Yue &nbsp;&nbsp; Chongshan Lin &nbsp;&nbsp; Jiaxuan You</p>
-      <p class="tsr-affiliations">University of Illinois Urbana-Champaign &nbsp;·&nbsp; University of Maryland, College Park &nbsp;·&nbsp; Tsinghua University</p>
+      <p class="tsr-authors">Tao Feng<sup>1,*</sup> &nbsp;·&nbsp; Fangxu Yu<sup>2,*</sup> &nbsp;·&nbsp; Haozhen Zhang<sup>3,*</sup> &nbsp;·&nbsp; Zhongjie Dai<sup>1</sup> &nbsp;·&nbsp; Liangqi Yuan<sup>4</sup> &nbsp;·&nbsp; Zijie Lei<sup>1</sup> &nbsp;·&nbsp; Weizhi Zhang<sup>5</sup> &nbsp;·&nbsp; Kunlun Zhu<sup>1</sup> &nbsp;·&nbsp; Haodong Yue<sup>1</sup> &nbsp;·&nbsp; Keyang Xuan<sup>1</sup> &nbsp;·&nbsp; Ge Liu<sup>1</sup> &nbsp;·&nbsp; Jiaxuan You<sup>1</sup></p>
+      <p class="tsr-equal-contribution"><sup>*</sup> Equal contribution</p>
+      <div class="tsr-affiliations">
+        <span><sup>1</sup> University of Illinois Urbana-Champaign</span>
+        <span><sup>2</sup> University of Maryland, College Park</span>
+        <span><sup>3</sup> Nanyang Technological University</span>
+        <span><sup>4</sup> Purdue University</span>
+        <span><sup>5</sup> University of Illinois Chicago</span>
+      </div>
       <div class="tsr-links" aria-label="Project resources">
         <a href="#paper" aria-label="Paper link coming soon"><span aria-hidden="true">▤</span> Paper</a>
         <a href="https://github.com/ulab-uiuc/LLMRouter" target="_blank" rel="noopener"><span aria-hidden="true">⌘</span> Code</a>
@@ -79,7 +86,7 @@ hide:
       <h2>BibTeX</h2>
       <pre><code>@misc{feng2026llmrouter,
   title  = {LLMRouter: A Unified Library, Evaluation, and Analysis for LLM Routing},
-  author = {Tao Feng and Haozhen Zhang and Zijie Lei and Haodong Yue and Chongshan Lin and Jiaxuan You},
+  author = {Tao Feng and Fangxu Yu and Haozhen Zhang and Zhongjie Dai and Liangqi Yuan and Zijie Lei and Weizhi Zhang and Kunlun Zhu and Haodong Yue and Keyang Xuan and Ge Liu and Jiaxuan You},
   year   = {2026}
 }</code></pre>
     </div>
