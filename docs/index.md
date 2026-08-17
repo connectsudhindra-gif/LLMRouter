@@ -11,7 +11,7 @@ hide:
         <div class="tsr-mark"><img src="assets/logo.png" alt="LLMRouter logo"></div>
         <h1><span class="tsr-wordmark">LLMRouter</span></h1>
       </div>
-      <p class="tsr-hero__title">A Unified Library, Evaluation, and Analysis for LLM Routing</p>
+      <p class="tsr-hero__title">Unified Infrastructure for Developing, Evaluating, and Deploying LLM Routers</p>
       <p class="tsr-authors">Tao Feng<sup>1,*</sup> &nbsp;·&nbsp; Fangxu Yu<sup>2,*</sup> &nbsp;·&nbsp; Haozhen Zhang<sup>3,*</sup> &nbsp;·&nbsp; Zhongjie Dai<sup>1</sup> &nbsp;·&nbsp; Liangqi Yuan<sup>4</sup> &nbsp;·&nbsp; Zijie Lei<sup>1</sup> &nbsp;·&nbsp; Weizhi Zhang<sup>5</sup> &nbsp;·&nbsp; Kunlun Zhu<sup>1</sup> &nbsp;·&nbsp; Haodong Yue<sup>1</sup> &nbsp;·&nbsp; Keyang Xuan<sup>1</sup> &nbsp;·&nbsp; Ge Liu<sup>1</sup> &nbsp;·&nbsp; Jiaxuan You<sup>1</sup></p>
       <p class="tsr-equal-contribution"><sup>*</sup> Equal contribution</p>
       <div class="tsr-affiliations">
@@ -84,10 +84,11 @@ hide:
   <section class="tsr-section tsr-cite" id="citation">
     <div class="tsr-container">
       <h2>BibTeX</h2>
-      <pre><code>@misc{feng2026llmrouter,
-  title  = {LLMRouter: A Unified Library, Evaluation, and Analysis for LLM Routing},
-  author = {Tao Feng and Fangxu Yu and Haozhen Zhang and Zhongjie Dai and Liangqi Yuan and Zijie Lei and Weizhi Zhang and Kunlun Zhu and Haodong Yue and Keyang Xuan and Ge Liu and Jiaxuan You},
-  year   = {2026}
+      <pre><code>@article{feng2026llmrouter,
+  title={LLMRouter: Unified Infrastructure for Developing, Evaluating, and Deploying LLM Routers},
+  author={Feng, Tao and Yu, Fangxu and Zhang, Haozhen and Dai, Zhongjie and Yuan, Liangqi and Lei, Zijie and Zhang, Weizhi and Zhu, Kunlun and Yue, Haodong and Xuan, Keyang and others},
+  journal={arXiv preprint arXiv:2608.06867},
+  year={2026}
 }</code></pre>
     </div>
   </section>
