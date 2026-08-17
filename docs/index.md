@@ -22,7 +22,7 @@ hide:
         <span><sup>5</sup> University of Illinois Chicago</span>
       </div>
       <div class="tsr-links" aria-label="Project resources">
-        <a href="#paper" aria-label="Paper link coming soon"><span aria-hidden="true">▤</span> Paper</a>
+        <a href="https://arxiv.org/abs/2608.06867" aria-label="Paper link coming soon"><span aria-hidden="true">▤</span> Paper</a>
         <a href="https://github.com/ulab-uiuc/LLMRouter" target="_blank" rel="noopener"><span aria-hidden="true">⌘</span> Code</a>
         <a href="https://huggingface.co/datasets/ulab-ai/xRouteBench" target="_blank" rel="noopener"><span aria-hidden="true">🤗</span> Hugging Face</a>
         <a href="blog/">Blog</a>
