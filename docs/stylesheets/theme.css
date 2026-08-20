@@ -189,4 +189,7 @@ html:not(.llmr-resource-nav) .md-header, html:not(.llmr-resource-nav) .md-tabs {
 .md-typeset__scrollwrap:has(.llmr-experiment-table) { overflow: visible; }
 .llmr-article__body { overflow-x: hidden; }
 html:has(.llmr-experiment-table), body:has(.llmr-experiment-table) { overflow-x: hidden; }
+.md-main:has(.llmr-experiment-table), .md-main__inner:has(.llmr-experiment-table), .md-content:has(.llmr-experiment-table), .md-content__inner:has(.llmr-experiment-table) { overflow-x: visible !important; }
+.llmr-experiment-table { overflow-x: auto !important; overflow-y: hidden; }
+.llmr-experiment-table table { display: table !important; max-width: none !important; overflow: visible !important; }
 @media screen and (max-width: 44.9844em) { .llmr-experiment-table { margin-top: 1.6rem; margin-bottom: 2rem; }.llmr-experiment-table table { min-width: 40rem; }.llmr-experiment-table th, .llmr-experiment-table td { padding-right: .58rem !important; padding-left: .58rem !important; } }
