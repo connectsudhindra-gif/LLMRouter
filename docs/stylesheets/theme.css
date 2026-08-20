@@ -177,7 +177,7 @@ html:not(.llmr-resource-nav) .md-header, html:not(.llmr-resource-nav) .md-tabs {
 @media screen and (max-width: 44.9844em) { .llmr-blog__hero, .llmr-article__hero { padding: 2.8rem 0 2rem; }.llmr-article__body { padding-bottom: 3rem; font-size: .96rem; }.llmr-article__lead { font-size: 1.06rem; }.llmr-work-closes-gap { grid-template-columns: 1fr; }.llmr-work-closes-gap__mark { text-align: center; }.llmr-benchmark-stats { grid-template-columns: repeat(2, 1fr); }.llmr-benchmark-stats div:nth-child(2) { border-right: 0; }.llmr-benchmark-stats div:nth-child(-n+2) { border-bottom: 1px solid #dedede; }.llmr-routing-flow { justify-content: flex-start; }.llmr-routing-flow b { display: none; }.llmr-blog__featured { grid-template-columns: 1fr; }.llmr-blog__featured-copy { padding: 1.45rem; }.llmr-blog__featured-stats div { min-height: 6.3rem; }.llmr-blog__pillars { grid-template-columns: 1fr; }.llmr-blog__pillars article { min-height: auto; border-right: 0; border-bottom: 1px solid #dedede; }.llmr-blog__pillars article:last-child { border-bottom: 0; }.llmr-article__problems, .llmr-results-gallery { grid-template-columns: 1fr; } }
 /* Paper-result tables embedded in the LLMRouter Blog. */
 .llmr-experiment-table { max-width: 100%; margin: 2rem 0 2.6rem; overflow-x: auto; border: 1px solid var(--llmr-border); border-radius: .5rem; }
-.llmr-experiment-table table { display: table !important; width: 100%; min-width: 46rem; max-width: none !important; margin: 0 !important; overflow: visible !important; border: 0 !important; border-radius: 0 !important; font-size: .76rem !important; }
+.llmr-experiment-table table { width: 100%; min-width: 46rem; margin: 0 !important; border: 0 !important; border-radius: 0 !important; font-size: .76rem !important; }
 .llmr-experiment-table caption { padding: .9rem 1rem; color: var(--md-default-fg-color--light); font-size: .78rem; line-height: 1.5; text-align: left; caption-side: top; }
 .llmr-experiment-table th { padding: .7rem .75rem !important; color: var(--md-default-fg-color) !important; font-size: .67rem !important; font-weight: 700; letter-spacing: .035em; text-align: right; text-transform: uppercase; white-space: nowrap; background: var(--llmr-hover) !important; }
 .llmr-experiment-table td { padding: .62rem .75rem !important; text-align: right; white-space: nowrap; }
@@ -185,11 +185,4 @@ html:not(.llmr-resource-nav) .md-header, html:not(.llmr-resource-nav) .md-tabs {
 .llmr-experiment-table__group td { padding: .46rem .75rem !important; color: var(--md-default-fg-color--light) !important; font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-align: left !important; text-transform: uppercase; background: var(--llmr-hover); }
 .llmr-experiment-table__total td { font-weight: 700; background: var(--llmr-hover); }
 .llmr-experiment-table--compact { max-width: 46rem; margin-right: auto; margin-left: auto; }
-/* Blog tables already provide their own horizontal scroll container. */
-.md-typeset__scrollwrap:has(.llmr-experiment-table) { overflow: visible; }
-.llmr-article__body { overflow-x: hidden; }
-html:has(.llmr-experiment-table), body:has(.llmr-experiment-table) { overflow-x: hidden; }
-.md-main:has(.llmr-experiment-table), .md-main__inner:has(.llmr-experiment-table), .md-content:has(.llmr-experiment-table), .md-content__inner:has(.llmr-experiment-table) { overflow-x: visible !important; }
-.llmr-experiment-table { overflow-x: auto !important; overflow-y: hidden; }
-.llmr-experiment-table table { display: table !important; max-width: none !important; overflow: visible !important; }
 @media screen and (max-width: 44.9844em) { .llmr-experiment-table { margin-top: 1.6rem; margin-bottom: 2rem; }.llmr-experiment-table table { min-width: 40rem; }.llmr-experiment-table th, .llmr-experiment-table td { padding-right: .58rem !important; padding-left: .58rem !important; } }
