@@ -1,5 +1,5 @@
 <div class="llmr-experiment-table">
-<table>
+<table class="llmr-experiment-table__table">
 <caption>xRouteBench evaluation coverage. Test-set sizes and metrics follow the paper appendix.</caption>
 <thead><tr><th>Category</th><th>Test set</th><th>Content</th><th># Test</th><th>Metric</th></tr></thead>
 <tbody>
@@ -17,7 +17,7 @@
 </div>
 
 <div class="llmr-experiment-table">
-<table>
+<table class="llmr-experiment-table__table">
 <caption>Performance-first xRouteBench results (α = 1.0, β = 0.0). Higher is better; the table reports the non-personalized tracks from the paper.</caption>
 <thead><tr><th>Router</th><th>Generic</th><th>LoCoMo</th><th>LongMemEval</th><th>Geometry3K</th><th>MathVista</th><th>Video</th><th>TimeSeries</th><th>Avg</th></tr></thead>
 <tbody>
@@ -43,7 +43,7 @@
 </div>
 
 <div class="llmr-experiment-table llmr-experiment-table--compact">
-<table>
+<table class="llmr-experiment-table__table">
 <caption>Persona-conditioned personalized-track accuracy. Higher is better.</caption>
 <thead><tr><th>Router</th><th>Accuracy</th><th>Router</th><th>Accuracy</th></tr></thead>
 <tbody>
@@ -59,7 +59,7 @@
 </div>
 
 <div class="llmr-experiment-table llmr-experiment-table--compact">
-<table>
+<table class="llmr-experiment-table__table">
 <caption>Accuracy on held-out real-user Slack sessions. Higher is better.</caption>
 <thead><tr><th>Router</th><th>Accuracy</th><th>Router</th><th>Accuracy</th></tr></thead>
 <tbody>
@@ -75,7 +75,7 @@
 </div>
 
 <div class="llmr-experiment-table">
-<table>
+<table class="llmr-experiment-table__table">
 <caption>Generic-LLM test performance when every node in a multi-agent topology is routed. Higher is better.</caption>
 <thead><tr><th>Router</th><th>Star</th><th>Tree</th><th>Graph</th><th>Chain</th><th>Plan-Exec-Sum</th><th>Avg</th></tr></thead>
 <tbody>
