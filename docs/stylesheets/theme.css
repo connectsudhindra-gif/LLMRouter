@@ -185,4 +185,6 @@ html:not(.llmr-resource-nav) .md-header, html:not(.llmr-resource-nav) .md-tabs {
 .llmr-experiment-table__group td { padding: .46rem .75rem !important; color: var(--md-default-fg-color--light) !important; font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-align: left !important; text-transform: uppercase; background: var(--llmr-hover); }
 .llmr-experiment-table__total td { font-weight: 700; background: var(--llmr-hover); }
 .llmr-experiment-table--compact { max-width: 46rem; margin-right: auto; margin-left: auto; }
+/* Blog tables already provide their own horizontal scroll container. */
+.md-typeset__scrollwrap:has(.llmr-experiment-table) { overflow: visible; }
 @media screen and (max-width: 44.9844em) { .llmr-experiment-table { margin-top: 1.6rem; margin-bottom: 2rem; }.llmr-experiment-table table { min-width: 40rem; }.llmr-experiment-table th, .llmr-experiment-table td { padding-right: .58rem !important; padding-left: .58rem !important; } }
