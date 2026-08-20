@@ -9,6 +9,10 @@
       "defaultSort": "avg",
       "columns": [
         {
+          "id": "avg",
+          "label": "Avg"
+        },
+        {
           "id": "general",
           "label": "General NLP"
         },
@@ -40,10 +44,6 @@
         {
           "id": "timeseries",
           "label": "TimeSeries"
-        },
-        {
-          "id": "avg",
-          "label": "Avg"
         }
       ],
       "rows": [
